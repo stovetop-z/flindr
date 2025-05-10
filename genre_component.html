@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flindr - Genre Selection</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: 'Lexend Deca', sans-serif;
+    }
+
+    .bg-container {
+      background-image: url('images/main_background.jpg');
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    div.genre-container {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    h1.title {
+      font-size: 5vw;
+      font-style: normal;
+      background-color: rgba(255, 255, 255, 0.55);
+      padding: 1vw;
+      border-radius: 10px;
+      font-family: "Lucida Console", "Courier New", monospace;
+    }
+
+    p.st {
+      font-size: 2vw;
+      font-family: "Lucida Console", "Courier New", monospace;
+    }
+
+    .btn-21 {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-appearance: button;
+      background-color: #000;
+      background-image: none;
+      color: #fff;
+      cursor: pointer;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+      font-size: 100%;
+      font-weight: 900;
+      line-height: 1.5;
+      margin: 0;
+      -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+      padding: 0;
+      text-transform: uppercase;
+      border-radius: 99rem;
+      border-width: 2px;
+      overflow: hidden;
+      padding: 0.8rem 3rem;
+      position: relative;
+    }
+
+    .btn-21 span {
+      mix-blend-mode: difference;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+      margin-top: 2rem;
+    }
+
+    .btn-container-left,
+    .btn-container-right {
+      width: 45%;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-container">
+    <div class="genre-container">
+        <p class="st">Are you in the mood for...?</p><br>
+      <h1 class="title">genres</h1>
+      
+
+      <!-- Button Container: Left and Right buttons -->
+      <div class="button-container">
+        <div class="btn-container-left">
+            <form action="/no" method="POST">
+                <input type="hidden" name="genre" value="Action">
+                <button class="btn-21" type="submit">No</button>
+            </form>
+        </div>
+        <div class="btn-container-right">
+            <form action="/yes" method="POST">
+                <input type="hidden" name="genre" value="Action">
+                <button class="btn-21" type="submit">Yes</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
